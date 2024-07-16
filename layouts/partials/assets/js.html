@@ -1,0 +1,16 @@
+{{/*
+   * js.html - a partial to add links for any assets found in assets/js;
+   *           these are linked plain for dev environments, but minified
+   *           and integrity-checked for production.
+   */}}
+
+{{- range resources.Match "js/*.js" }}
+  {{- if eq hugo.Environment "development" }}
+    <script src="{{ .RelPermalink }}"></script>
+  {{- else }}
+    {{- $opts := dict "minify" true }}
+    {{- with . | js.Build $opts | fingerprint }}
+    <script src="{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous"></script>
+    {{- end }}
+  {{- end }}
+{{- end }}

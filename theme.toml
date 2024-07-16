@@ -1,0 +1,16 @@
+name = 'fsquared-core'
+license = 'MIT'
+licenselink = 'https://github.com/fsquared-uk/fsquared-core/LICENSE'
+description = 'A basic Hugo theme to be used as a foundation for sites'
+
+# The home page of the theme, where the source can be found
+homepage = 'https://github.com/fsquared-uk/fsquared-core'
+
+# Taxonomy terms
+tags = ['basic', 'generic']
+features = ['framework']
+
+# If the theme has a single author
+[author]
+  name = 'Pete Favelle'
+  homepage = 'https://www.fsquared.co.uk'

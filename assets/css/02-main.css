@@ -1,0 +1,26 @@
+body {
+  color: #222;
+  font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+  line-height: 1.5;
+  margin: 1rem auto;
+  max-width: 768px;
+}
+
+header {
+  border-bottom: 1px solid #222;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+footer {
+  border-top: 1px solid #222;
+  margin-top: 1rem;
+  text-align: center;
+  font-style: italic;
+  font-size: 75%;
+}
+
+a {
+  color: #00e;
+  text-decoration: none;
+}

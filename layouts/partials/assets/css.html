@@ -1,0 +1,29 @@
+{{/*
+   * css.html - a partial to add links for any assets found in assets/css;
+   *            these are linked plain for dev environments, but minified
+   *            and integrity-checked for production.
+   */}}
+
+{{- /* Step one, link any pure CSS files. Prefix numbers enforce ordering */ -}}
+
+{{- range resources.Match "css/*.css" }}
+  {{- if eq hugo.Environment "development" }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{- else }}
+    {{- with . | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{- end }}
+  {{- end }}
+{{- end -}}
+
+{{/* Step two, do exactly the same for any SASS files we have to process */}}
+
+{{- range resources.Match "css/*.scss" }}
+  {{- $style := . | css.Sass }}
+  {{- if eq hugo.Environment "development" }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+  {{- else }}
+    {{- $style := . | css.Sass | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
+  {{- end }}
+{{- end }}

@@ -1,0 +1,17 @@
+<html lang="{{ with site.Language.LanguageCode }}{{ . }}{{ else }}en{{ end }}">
+  <head>
+  {{ partial "head.html" . }}
+  </head>
+  <body>
+    <header>
+      {{ partial "header.html" . }}
+    </header>
+    <main>
+      {{- block "main" . }}{{ end }}
+    </main>
+    <footer>
+    {{ partial "footer.html" . }}
+    </footer>
+    {{- partial "assets/js.html" . }}
+  </body>
+</html>
