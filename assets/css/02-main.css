@@ -1,3 +1,4 @@
+/* Set some sensible body defaults. */
 body {
   color: #222;
   font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
@@ -6,6 +7,7 @@ body {
   max-width: 768px;
 }
 
+/* Style the headers and footers neutrally. */
 header {
   border-bottom: 1px solid #222;
   margin-bottom: 1rem;
@@ -20,7 +22,34 @@ footer {
   font-size: 75%;
 }
 
-a {
-  color: #00e;
-  text-decoration: none;
+/* Set headings to a sensible size. */
+h1 {
+  font-size: 2.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+h2 {
+  font-size: 2.0rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+h3 {
+  font-size: 1.6rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+h4 {
+  font-size: 1.4rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+h5 {
+  font-size: 1.3rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+h6 {
+  font-size: 1.1rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
 }

@@ -1,0 +1,42 @@
+/*
+ * theme.scss - a collection of mixins and other helpers, that can be
+ *              included into your own SCSS files.
+ */
+
+/* Responsive mixins - sets up some useful Pure.css breakpoints. */
+
+@mixin sm {
+  @media (min-width: 35.5em) {
+    @content;
+  }
+}
+@mixin md {
+  @media (min-width: 48em) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: 64em) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (min-width: 80em) {
+    @content;
+  }
+}
+@mixin xxl {
+  @media (min-width: 120em) {
+    @content;
+  }
+}
+@mixin xxxl {
+  @media (min-width: 160em) {
+    @content;
+  }
+}
+@mixin x4k {
+  @media (min-width: 240em) {
+    @content;
+  }
+}
