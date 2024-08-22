@@ -9,6 +9,21 @@ solution.
 
 ## Features
 
+* includes [PureCSS](https://purecss.io/)
+* automatically links any CSS assets (in `assets/css`)
+* automatically links any JS assets (in `assets/js`)
+* automatically builds and links any SASS assets (in `assets/scss`)
+
+
 ## Installation
 
+Clone this repo into your `themes` directory (or copy it), and add
+
+	theme = 'fsquared-core'
+
+in your `hugo.toml`.
+
+
 ## Configuration
+
+None.

@@ -3,6 +3,7 @@
  *              included into your own SCSS files.
  */
 
+
 /* Responsive mixins - sets up some useful Pure.css breakpoints. */
 
 @mixin sm {
@@ -38,5 +39,24 @@
 @mixin x4k {
   @media (min-width: 240em) {
     @content;
+  }
+}
+
+/* Responsive helpers for Pure. */
+@media (max-width: 48em) {
+  .pure-hidden-md {
+    display: none;
+  }
+}
+
+@media (max-width: 64em) {
+  .pure-hidden-lg {
+    display: none;
+  }
+}
+
+@media (max-width: 80em) {
+  .pure-hidden-xl {
+    display: none;
   }
 }
